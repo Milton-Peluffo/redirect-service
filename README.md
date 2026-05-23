@@ -103,13 +103,6 @@ npm run test:coverage
 npm run build
 ```
 
-## Seguridad
-
-- No se exponen credenciales en el código
-- Las variables de entorno se gestionan mediante configuración de AWS
-- El servicio valida los parámetros de entrada antes de procesar
-- Manejo de errores robusto para evitar exposición de información sensible
-
 ## Licencia
 
 Este proyecto es parte de un módulo educativo de desarrollo en la nube.
