@@ -1,24 +1,29 @@
 describe('Redirect Handler - Tests básicos', () => {
-  it('debería poder importar el handler sin errores', () => {
+  it('Test 1: debería poder importar el handler sin errores', () => {
     expect(() => {
       require('./redirect');
     }).not.toThrow();
   });
 
-  it('debería exportar una función handler', () => {
+  it('Test 2: debería exportar una función handler', () => {
     const module = require('./redirect');
     expect(module).toHaveProperty('handler');
     expect(typeof module.handler).toBe('function');
   });
 
-  it('debería poder importar el módulo db sin errores', () => {
+  it('Test 3: debería poder importar el módulo db sin errores', () => {
     expect(() => {
       require('../utils/db');
     }).not.toThrow();
   });
 
-  it('debería exportar dynamoDb desde el módulo db', () => {
+  it('Test 4: debería exportar dynamoDb desde el módulo db', () => {
     const dbModule = require('../utils/db');
     expect(dbModule).toHaveProperty('dynamoDb');
+  });
+
+  it('Test 5: el handler debería ser una función async', () => {
+    const module = require('./redirect');
+    expect(module.handler.constructor.name).toBe('AsyncFunction');
   });
 });
