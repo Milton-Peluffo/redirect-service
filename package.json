@@ -1,0 +1,22 @@
+{
+  "name": "redirectlinks",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Modulo 2: Servicio de Redirección de URLs",
+  "main": "dist/handlers/redirect.js",
+  "scripts": {
+    "build": "esbuild src/handlers/redirect.ts --bundle --minify --sourcemap --platform=node --target=node20 --outfile=dist/handlers/redirect.js",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.500.0",
+    "@aws-sdk/lib-dynamodb": "^3.500.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.130",
+    "@types/node": "^20.11.0",
+    "esbuild": "^0.20.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  }
+}
